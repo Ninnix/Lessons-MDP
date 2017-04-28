@@ -17,7 +17,7 @@ public class Snaporaz {
         t1.start();
         t2.start();
 
-        Thread.currentThread().sleep(5000);
+        Thread.currentThread().sleep(5000); //mette a dormire il main
 
         t1.interrupt();
         t2.interrupt();

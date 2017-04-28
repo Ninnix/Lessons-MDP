@@ -22,7 +22,6 @@ public class SillyTest {
         // t4.start();
         // t5.start();
         // t6.start();
-
         System.out.println("io avrei finito...");
     }
 }
