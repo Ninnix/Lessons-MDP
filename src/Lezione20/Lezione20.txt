@@ -1,0 +1,10 @@
+Metodi Formali:
+
+Asserzione = comando assert
+non vengono testate a runtime almeno che non esplicitato
+un esempio dovrebbe essere il top della lezione 19, compreso tra -1 e stk.lenght
+
+Perche' usarle
+
+Eccezioni e errori, entrambi sono throwable, la differenza e' che java le eccezioni sa controllarle
+gli errori invece no.
