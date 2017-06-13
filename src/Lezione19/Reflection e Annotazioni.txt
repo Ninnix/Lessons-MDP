@@ -1,0 +1,24 @@
+Reflection
+
+Questo è uno strumento che permette di ottenere informazioni al runtime che
+potremmo dire "introspettive" sulle classi, le interfacce e gli oggetti che aggirano i
+vincoli imposti dalle regole di accessibilità del linguaggio. La reflection è sopratutto
+usata per realizzare strumenti per la costruzione automatica di codice come ad esempio
+per facilitare lo unit testing o la costruzione di UI.
+
+Annotazioni
+
+Le annotazioni possono essere usate per annotare non solo metodi (ad es. @Override)
+e interfacce (ad es. @FunctionalInterface), come abbiamo visto finora, ma quasi tutti
+gli elementi di un programma Java. Quindi classi, interfacce, costruttori, metodi,
+parametri e campi2. Ogni annotazione è rappresentata da un oggetto Annotation nel
+package java.lang.annotation. Gli oggetti che rappresentano elementi che possono
+essere annotati hanno metodi con intestazione Annotation[] getDeclaredAnnotations()
+e anche Annotation[] getAnnotations(). La differenza è abbastanza sottile semplificando
+un po' si può dire che i primi ritornano le annotazioni direttamente presenti sull'elemento
+mentre i secondi ritornano anche quelle ereditate. Bisogna però precisare che non tutte le
+annotazioni sono visibili al runtime. Infatti un'annotazione se non esplicitamente richiesto
+non è visibile durante l'esecuzione. Ad esempio @Override non è visibile al runtime, d'altronde
+questo è naturale dato che la sua funzione si esplica durante la compilazione. Siccome le annotazioni
+possono essere presenti per ogni categoria di membro, conviene definire un metodo di utilità che le
+tratti in modo uniforme.
