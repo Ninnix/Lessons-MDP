@@ -1,0 +1,32 @@
+Eccezioni. Try, catch, finally
+
+Durante l'esecuzione di un programma possono verificarsi degli errori. Quando si verifica un errore
+durante l'esecuzione di un programma, ovvero si verifica un'eccezione, la macchina virtuale Java
+lancia (throws) una opportuna eccezione. Un'eccezione è un oggetto il cui tipo è relativo alla
+natura dell'errore.
+
+Se nessuna parte del programma lo "cattura" la JVM termina l'esecuzione del programma riportando
+l'eccezione. Il meccanismo per la gestione degli errori o eccezioni offerto da Java si basa proprio
+sulla possibilità di catturare (catch) le eccezioni che possono venir lanciate durante l'esecuzione.
+
+try {
+    una o più istruzioni che si vogliono monitorare
+} catch (ExceptionType1 ex) {
+    // Eseguito solo se si verifica un'eccezione di tipo ExceptionType1
+    gestione dell'eccezione ex di tipo ExceptionType1
+} catch (ExceptionType2 ex) {
+    // Eseguito solo se si verifica un'eccezione di tipo ExceptionType2
+    gestione dell'eccezione ex di tipo ExceptionType2
+}
+ . . .
+} catch (ExceptionTypeN ex) {
+    // Eseguito solo se si verifica un'eccezione di tipo ExceptionTypeN
+    gestione dell'eccezione ex di tipo ExceptionTypeN
+} finally {  // Eseguito anche se si verifica un'eccezione, catturata o meno
+    codice che è eseguito in ogni caso
+}
+
+Non appena si verifica un'eccezione nel blocco di un try il controllo passa al primo blocco di una catch,
+se esiste, che cattura l'eccezione. Poi se esiste un blocco finally questo viene comunque eseguito2. Se
+l'eccezione è stata catturata da un'opportuna catch, allora il controllo passa alla prossima istruzione
+dopo il try-catch, altrimenti l'esecuzione del metodo termina immediatamente.

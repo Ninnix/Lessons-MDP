@@ -7,7 +7,7 @@ public class C1 {
     // una classe
 
     private int a = 1;
-    private int b = 2;
+    protected int b = 2;
 
     public C1 (int a) {
         this.a = a;

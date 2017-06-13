@@ -1,0 +1,22 @@
+CLASSI ANONIME
+
+il nome della classe locale non è importante perché è usato solamente per creare un unico oggetto
+(e d'altronde il nome non è visibile al di fuori del metodo in cui la classe locale è definita).
+ Questa situazione accade piuttosto spesso e così Java dà la possibilità di usare una classe interna
+ anonima (anonymous inner class) o, più brevemente, classe anonima. Una classe anonima è definita e
+ istanziata simultaneamente in un'unica espressione. La sintassi dell'espressione definitoria-creazionale
+ (che definisce la classe e la istanzia) è leggermente differente a seconda che la classe anonima estenda
+ una classe (astratta o concreta) o implementi un'interfaccia:
+
+ new NomeC(eventuali parametri) {  // NomeC, nome della classe che viene estesa
+     corpo della classe anonima    // I parametri sono quelli di un costruttore
+ }                                 // della classe NomeC
+
+ new NomeI() {                       // NomeI, nome dell'interfaccia implementata
+     corpo della classe anonima      // Implementazione dei metodi di NomeI
+ }
+
+ Dalla sintassi è chiaro perché sono chiamate classi anonime: non c'è il nome della nuova classe. Inoltre,
+ le classi anonime non possono avere costruttori. Nel caso la classe anonima estenda una classe, il
+ costruttore usato è uno di quelli della classe che viene estesa. Nel caso dell'interfaccia, il costruttore
+ è quello di default senza parametri. Per il resto sono uguali alle classi locali

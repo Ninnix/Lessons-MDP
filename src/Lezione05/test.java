@@ -30,8 +30,8 @@ public class test {
 
         // z.blorg(); // NO!
         // z.blah(100); // NO!
-        z.blah();
+        z.blah(); // stampa a + b = 8
 
-        System.out.println("... anche se b = " + z.b);
+        System.out.println("... anche se b = " + z.b); //la risoluzione dei metodi è dinamica, quella degli attributi è statica
     }
 }
